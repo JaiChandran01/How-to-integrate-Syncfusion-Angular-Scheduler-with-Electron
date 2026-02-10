@@ -8,18 +8,16 @@ import {
   WeekService,
   WorkWeekService,
   MonthService,
-  AgendaService,
-  DragAndDropService, 
-  ResizeService
+  AgendaService
 } from '@syncfusion/ej2-angular-schedule';
 
 @Component({
   selector: 'app-root',
   standalone: true,
   imports: [CommonModule, ScheduleModule],
-  providers: [DayService, WeekService, WorkWeekService, MonthService, AgendaService, DragAndDropService, ResizeService],
+  providers: [DayService, WeekService, WorkWeekService, MonthService, AgendaService],
   template: `
-    <h2>Syncfusion Scheduler (Electron)</h2>
+    <h2>Syncfusion Scheduler</h2>
 
     <ejs-schedule
       width="100%"
@@ -27,9 +25,6 @@ import {
       [selectedDate]="selectedDate"
       [currentView]="currentView"
       [eventSettings]="eventSettings"
-
-      [allowDragAndDrop]="true"
-      [allowResizing]="true"
     >
       <e-views>
         <e-view option="Day"></e-view>
